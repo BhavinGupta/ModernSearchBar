@@ -1,0 +1,6 @@
+framework module Pods_DemoModernSearchBar {
+  umbrella header "Pods-DemoModernSearchBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

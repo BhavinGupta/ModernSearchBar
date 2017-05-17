@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gaf-CS-9Le">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modern Search View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoModernSearchBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search something really cool..." translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-AZ-weU" customClass="ModernSearchBar" customModule="ModernSearchBar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RVM-vg-oMS"/>
+                                </constraints>
+                                <color key="tintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-P2-e0l">
+                                <rect key="frame" x="16" y="313" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="RRd-G5-NCe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.85098039215686272" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6ZE-AZ-weU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Ir-dr-P0u"/>
+                            <constraint firstAttribute="trailing" secondItem="a7a-P2-e0l" secondAttribute="trailing" constant="16" id="5fo-L2-dfm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a7a-P2-e0l" secondAttribute="bottom" constant="313" id="JfL-2P-U3t"/>
+                            <constraint firstItem="a7a-P2-e0l" firstAttribute="top" secondItem="6ZE-AZ-weU" secondAttribute="bottom" constant="205" id="XVG-eY-4Uq"/>
+                            <constraint firstItem="6ZE-AZ-weU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qQZ-WT-UDe"/>
+                            <constraint firstAttribute="trailing" secondItem="6ZE-AZ-weU" secondAttribute="trailing" id="xnS-7W-dkT"/>
+                            <constraint firstItem="a7a-P2-e0l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="zdi-f2-ZgS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Modern Search View" id="A4C-0g-Ns6"/>
+                    <connections>
+                        <outlet property="lblSearchStr" destination="a7a-P2-e0l" id="gNV-K9-enu"/>
+                        <outlet property="modernSearchBar" destination="6ZE-AZ-weU" id="3rZ-C1-d2p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="64s-eq-hLF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gaf-CS-9Le" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PMI-Fb-Jnp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="v3l-TA-N7I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyC-kB-ySg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="139"/>
+        </scene>
+    </scenes>
+</document>
